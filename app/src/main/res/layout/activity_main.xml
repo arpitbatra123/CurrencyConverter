@@ -18,8 +18,8 @@
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
         android:onClick="input"/>
 
     <Button
@@ -30,8 +30,8 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
         android:layout_toRightOf="@id/button7"
         android:onClick="input"/>
 
@@ -43,8 +43,8 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
         android:layout_toRightOf="@id/button8"
         android:onClick="input"/>
 
@@ -56,9 +56,9 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/button7"
         android:onClick="input"/>
 
@@ -70,9 +70,9 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/button8"
         android:layout_toRightOf="@id/button4"
         android:onClick="input"/>
@@ -85,9 +85,9 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/button9"
         android:layout_toRightOf="@id/button5"
         android:onClick="input"/>
@@ -100,9 +100,9 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/button4"
         android:onClick="input"/>
 
@@ -114,9 +114,9 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/button5"
         android:layout_toRightOf="@id/button1"
         android:onClick="input"/>
@@ -129,24 +129,24 @@
         android:textSize="45sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
         android:layout_below="@id/button6"
         android:layout_toRightOf="@id/button2"
         android:onClick="input"/>
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="149dp"
+        android:layout_width="141dp"
         android:layout_height="70dp"
         android:text="0"
         android:textSize="40sp"
         android:background="@color/white"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="9dp"
         android:layout_below="@id/button1"
         android:gravity="center"
@@ -158,14 +158,12 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_below="@id/button3"
-        android:layout_centerVertical="true"
         android:layout_marginBottom="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
         android:layout_toRightOf="@id/button0"
         android:background="@color/white"
-        android:gravity="center"
         android:text="."
         android:textSize="45sp"
         android:onClick="input"/>
@@ -173,32 +171,31 @@
     <Button
         android:id="@+id/buttonac"
         android:layout_width="100dp"
-        android:layout_height="149dp"
+        android:layout_height="70dp"
         android:text="AC"
         android:textSize="45sp"
         android:background="@color/white"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginStart="1dp"
         android:gravity="center"
         android:layout_alignTop="@+id/button9"
         android:layout_toRightOf="@+id/button9"
         android:layout_toEndOf="@+id/button9" />
 
+
+
     <Button
         android:id="@+id/buttonGO"
         android:layout_width="100dp"
-        android:layout_height="149dp"
+        android:layout_height="139dp"
         android:text="GO"
         android:textSize="45sp"
         android:background="@color/white"
-        android:layout_marginLeft="9dp"
-        android:layout_marginStart="9dp"
         android:gravity="center"
-        android:layout_toRightOf="@+id/button3"
-        android:layout_below="@+id/buttonac"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="9dp"
-        />
+        android:layout_alignBottom="@+id/buttondec"
+        android:layout_alignLeft="@+id/buttonac"
+        android:layout_alignStart="@+id/buttonac"
+        android:layout_alignTop="@+id/button3" />
 
     <Button
         android:id="@+id/buttonfrom"
@@ -207,9 +204,15 @@
         android:fontFamily="monospace"
         android:text="USD"
         android:textSize="40sp"
-        android:layout_alignTop="@+id/buttonto"
-        android:layout_alignLeft="@+id/button7"
-        android:layout_alignStart="@+id/button7" />
+        android:layout_alignBaseline="@+id/buttonto"
+        android:layout_alignBottom="@+id/buttonto"
+        android:layout_toLeftOf="@+id/button9"
+        android:layout_toStartOf="@+id/button9"
+        android:layout_marginRight="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
 
     <Button
         android:id="@+id/buttonto"
@@ -218,12 +221,14 @@
         android:fontFamily="monospace"
         android:text="INR"
         android:textSize="40sp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginBottom="17dp"
         android:layout_above="@+id/button9"
-        android:layout_alignRight="@+id/buttonac"
-        android:layout_alignEnd="@+id/buttonac"
-        android:layout_marginRight="7dp"
-        android:layout_marginEnd="7dp" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        />
 
     <TextView
         android:id="@+id/textViewfrom"
@@ -251,6 +256,21 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_toRightOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DEL"
+        android:textSize="28sp"
+        android:layout_alignTop="@+id/button6"
+        android:layout_alignLeft="@+id/buttonac"
+        android:layout_alignStart="@+id/buttonac"
+        android:layout_alignRight="@+id/buttonac"
+        android:layout_alignEnd="@+id/buttonac"
+        android:layout_above="@+id/button3"
+        android:background="@color/white"
+        />
 
 
 </android.widget.RelativeLayout>
