@@ -1,11 +1,9 @@
 package com.megahertzlabs.currencyconverter;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -23,15 +21,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.UnknownHostException;
 import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
-    Button n0,n1,n2,n3,n4,n5,n6,n7,n8,n9,ndec,nac,ngo,from,to;
+    Button n0,n1,n2,n3,n4,n5,n6,n7,n8,n9,ndec,nac,ngo,from,to,ndel;
     TextView fromt;
     Double exrate=0.0,converted;
     String m;
@@ -55,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         from=(Button)findViewById(R.id.buttonfrom);
         to=(Button)findViewById(R.id.buttonto);
         fromt=(TextView)findViewById(R.id.textViewfrom);
+        ndel=(Button)findViewById(R.id.imageButton);
         nac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +60,26 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        ndel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!(fromt.getText().toString().isEmpty())) {
+                    String toset = fromt.getText().toString().substring(0, fromt.getText().toString().length() - 1);
+                    fromt.setText(toset);
+
+                }
+                else
+                {
+                    fromt.setText("0.000");
+
+                }
+
+
+            }
+        });
+
+
 
 
 
@@ -160,31 +176,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//    private boolean isNetwork() {
-//        final InetAddress address;
-//        try {
-//            address = InetAddress.getByName("http://api.fixer.io");
-//            return !address.equals("");
-//        } catch (UnknownHostException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return false;
-//
-//
-//
-//
-//    }
 
-    public boolean isConnected() {
-        String command="ping -c 1 google.com";
-        try {
-            return (Runtime.getRuntime().exec(command).waitFor()==0);
-        } catch (InterruptedException | IOException e) {
-            e.printStackTrace();
+
+    public boolean isConnected(){
+        ConnectivityManager connec =(ConnectivityManager)getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
+        if ( connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTED || connec.getNetworkInfo(0).getState() ==
+                android.net.NetworkInfo.State.CONNECTING ||
+                connec.getNetworkInfo(1).getState() ==
+                        android.net.NetworkInfo.State.CONNECTING ||
+                connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED ) {
+            return true;
+        }else if (
+                connec.getNetworkInfo(0).getState() ==
+                        android.net.NetworkInfo.State.DISCONNECTED ||
+                        connec.getNetworkInfo(1).getState() ==
+                                android.net.NetworkInfo.State.DISCONNECTED  ) {
+            return false;
         }
-
-
         return false;
     }
 
@@ -221,6 +229,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     class JSONFetch extends AsyncTask<Void,Void,Void>
     {
            String f,t;
@@ -234,14 +244,6 @@ public class MainActivity extends AppCompatActivity {
             //Toast.makeText(MainActivity.this,f,Toast.LENGTH_SHORT).show();
             t=tothat;
             //Toast.makeText(MainActivity.this,t,Toast.LENGTH_SHORT).show();
-
-
-
-
-
-
-
-
 
         }
         @Override
@@ -272,9 +274,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            dialog.setMessage("Calculating");
+            dialog.setMessage("Calculating...");
             dialog.show();
-
             super.onPreExecute();
         }
 
@@ -285,24 +286,27 @@ public class MainActivity extends AppCompatActivity {
             try {
                 jsonObject=new JSONObject(get);
                 ratesjson = jsonObject.getString("rates");
-                jsonObject1 =new JSONObject(ratesjson);
-                 m=jsonObject1.getString(t);
-                //Toast.makeText(MainActivity.this,"Exchange Rate = "+m,Toast.LENGTH_SHORT).show();
-                exrate=Double.parseDouble(m);
-                String fromvals=fromt.getText().toString();
-                if(fromvals.equals("."))
-                    fromvals="0.0";
-                Double fromval=Double.parseDouble(fromvals);
-                converted=exrate*fromval;
-                //Toast.makeText(MainActivity.this,Double.toString(converted),Toast.LENGTH_SHORT).show();
-                fromt.setText("");
-                fromt.setHintTextColor(Color.parseColor("#5c007a"));
-                //fromt.setLines(1);
-                if((String.format(Locale.getDefault(),"%.4f",converted).length())>13)
-                {
-                    fromt.setTextSize(28f);
-                }
-                fromt.setHint("= "+String.format(Locale.getDefault(),"%.4f",converted));
+
+                    jsonObject1 = new JSONObject(ratesjson);
+                    m = jsonObject1.getString(t);
+                    //Toast.makeText(MainActivity.this,"Exchange Rate = "+m,Toast.LENGTH_SHORT).show();
+                    exrate = Double.parseDouble(m);
+                    String fromvals = fromt.getText().toString();
+                    if (fromvals.equals("."))
+                        fromvals = "0.0";
+                    Double fromval = Double.parseDouble(fromvals);
+                    converted = exrate * fromval;
+                    //Toast.makeText(MainActivity.this,Double.toString(converted),Toast.LENGTH_SHORT).show();
+                    fromt.setText("");
+                    fromt.setHintTextColor(Color.parseColor("#5c007a"));
+                    //fromt.setLines(1);
+                    if ((String.format(Locale.getDefault(), "%.4f", converted).length()) > 13) {
+                        fromt.setTextSize(28f);
+                    }
+                    fromt.setHint("= " + String.format(Locale.getDefault(), "%.4f", converted));
+
+
+
 
 
             } catch (JSONException e) {

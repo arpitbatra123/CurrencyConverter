@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pink"
@@ -166,8 +165,7 @@
         android:background="@color/white"
         android:text="."
         android:textSize="45sp"
-        android:onClick="input"
-        tools:ignore="RtlHardcoded" />
+        android:onClick="input"/>
 
     <Button
         android:id="@+id/buttonac"
