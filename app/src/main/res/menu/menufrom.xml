@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/curr1" android:title="American Dollars: USD"  />
+    <item android:id="@+id/curr2" android:title="Indian Rupee: INR" />
+    <item android:id="@+id/curr3" android:title="Australian Dollar: AUD" />
+    <item android:id="@+id/curr4" android:title="Canadian Dollar: CAD" />
+    <item android:id="@+id/curr5" android:title="European Union: EUR" />
+    <item android:id="@+id/curr6" android:title="Great Britain Pound: GBP" />
+    <item android:id="@+id/curr7" android:title="Indonesian Rupee: IDR" />
+
+
+</menu>
