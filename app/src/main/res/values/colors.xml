@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#c158dc</color>
-    <color name="colorPrimaryDark">#5c007a</color>
-    <color name="colorAccent">#5c007a</color>
-    <color name="textback">#FF10</color>
-    <color name="white">#FFff</color>
-    <color name="pink">#ffc0cb</color>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#5D4037</color>
+    <color name="colorAccent">#448AFF</color>
+    <color name="splashBackground">#D7CCC8</color>
+    <color name="splashText">#212121</color>
+    <color name="textBackground">#B2EBF2</color>
+    <color name="textColor">#212121</color>
 
+    <color name="black_overlay">#66000000</color>
 </resources>

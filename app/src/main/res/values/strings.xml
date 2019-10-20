@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+    <string name="convertText">Convert</string>
+    <string name="toCTA">↓</string>
+    <string name="fromHint">Enter Amount</string>
+    <string name="toHint">Press Convert</string>
+
+    <string-array name="currency_options">
+        <item>USD</item>
+        <item>INR </item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>EUR</item>
+        <item>GBP</item>
+    </string-array>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
