@@ -1,5 +1,5 @@
 # CurrencyConverter
-🤑Currency Converter, an Android Application to Convert between different currency formats.
+🤑 Currency Converter, an Android Application to Convert between different currency formats.
 
 # Source of Currency Data
 https://www.frankfurter.app/
