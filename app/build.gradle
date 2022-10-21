@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdk 33
     defaultConfig {
         applicationId "com.arpitbatra.currencyconverter"
         minSdkVersion 15
@@ -17,6 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'com.arpitbatra.currencyconverter'
 }
 
 dependencies {
